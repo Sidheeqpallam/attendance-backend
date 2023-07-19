@@ -1,0 +1,37 @@
+{
+  "name": "dawa-backend",
+  "version": "1.0.0",
+  "description": "This is a node app for Da'wa students managing system.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "npx nodemon ./bin/www",
+    "seed": "node ./seed/index.js",
+    "lint": "npx eslint ./",
+    "lint:fix": "npx eslint ./ --fix",
+    "swagger": "swagger-editor-live -p 8080 public/docs/swagger.yaml",
+    "test": "node --expose-gc ./node_modules/.bin/jest tests/routes/ --runInBand --silent --forceExit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.3.1",
+    "morgan": "^1.10.0",
+    "swagger-editor-live": "^2.1.8"
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "jest": "^29.6.1",
+    "nodemon": "^2.0.22"
+  }
+}
